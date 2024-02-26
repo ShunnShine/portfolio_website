@@ -534,6 +534,14 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.static {
+  position: static;
+}
+
+.flex {
+  display: flex;
+}
+
 .h-2 {
   height: 0.5rem;
 }
@@ -542,12 +550,28 @@ video {
   height: 5rem;
 }
 
+.h-full {
+  height: 100%;
+}
+
 .min-h-screen {
   min-height: 100vh;
 }
 
 .w-full {
   width: 100%;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.gap-5 {
+  gap: 1.25rem;
 }
 
 .bg-10 {
@@ -563,4 +587,8 @@ video {
 .bg-60 {
   --tw-bg-opacity: 1;
   background-color: rgb(18 166 79 / var(--tw-bg-opacity));
+}
+
+.p-5 {
+  padding: 1.25rem;
 }
