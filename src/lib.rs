@@ -32,7 +32,7 @@ pub fn HashRouter() -> impl IntoView {
                 "#/about" => view! {<AboutPage/>},
                 "#/resume" => view! {<ResumePage/>},
                 "#/projects" => view! {<ProjectPage/>},
-                unknown_hash => view! {<p>{format!("\"{}\" Route Not found", unknown_hash)}</p>}.into_view(),
+                unknown_hash => format!("\"{}\" Route Not found", unknown_hash).into_view(),
             }
         }}
     }
