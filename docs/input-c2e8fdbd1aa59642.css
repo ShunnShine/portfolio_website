@@ -538,10 +538,6 @@ video {
   position: static;
 }
 
-.absolute {
-  position: absolute;
-}
-
 .mb-5 {
   margin-bottom: 1.25rem;
 }
@@ -612,10 +608,6 @@ video {
 
 .rounded-md {
   border-radius: 0.375rem;
-}
-
-.border {
-  border-width: 1px;
 }
 
 .border-8 {
