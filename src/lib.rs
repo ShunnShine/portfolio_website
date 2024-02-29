@@ -25,15 +25,12 @@ pub fn App() -> impl IntoView {
 #[component]
 pub fn HashRouter() -> impl IntoView {
     let hash_memo = use_location().hash;
-    view! { 
-        {move || {
-            match hash_memo.get().as_str() {
-                "" => view! {<AboutPage/>},
-                "#/about" => view! {<AboutPage/>},
-                "#/resume" => view! {<ResumePage/>},
-                "#/projects" => view! {<ProjectPage/>},
-                unknown_hash => format!("\"{}\" Route Not found", unknown_hash).into_view(),
-            }
-        }}
+    move || {
+        match hash_memo.get().as_str() {
+            "" | "#/about" => view! {<AboutPage/>},
+            "#/resume" => view! {<ResumePage/>},
+            "#/projects" => view! {<ProjectPage/>},
+            unknown_hash => format!("\"{}\" Route Not found", unknown_hash).into_view(),
+        }
     }
 }
